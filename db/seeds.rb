@@ -25,4 +25,5 @@ csv.each do |row|
   @seed.generation = row["Generation"]
   @seed.legendary = row["Legendary"]
   @seed.save!
+  puts :saved
 end

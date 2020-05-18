@@ -78,4 +78,18 @@ RSpec.describe Pokemon, type: :model do
       expect(@pokemon_one).to_not be_valid
     end
   end
+
+  describe "Persist Database" do
+    before(:all) do
+      @pokemon_persisted = create(:pokemon)
+    end
+    it 'must be valid' do
+      expect(@pokemon_persisted).to be_valid
+    end
+
+    it 'must not allow pokemons with the same name' do
+      @pokemon_same_name = @pokemon_persisted.dup
+      expect(@pokemon_same_name).to_not be_valid
+    end
+  end
 end

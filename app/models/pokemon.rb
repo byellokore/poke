@@ -10,4 +10,5 @@ class Pokemon < ApplicationRecord
   validates_presence_of :speed
   validates_presence_of :generation
   validates_inclusion_of :legendary, in: [true, false]
+  validates_uniqueness_of :name
 end
