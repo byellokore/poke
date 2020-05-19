@@ -24,7 +24,7 @@ rails db:setup
 ```
 ### Dockerfile & docker-compose.yml
 
-* To run the anywhere without issues.
+* To run the without issues.
 
 
 ## Tests
