@@ -21,7 +21,7 @@ RSpec.describe "/pokemons", type: :request do
 
   describe "GET /index?page=2" do
     it "renders a successful response of page 2" do
-      # it need improvement
+      # it needs improvement
         Rails.application.load_seed
       # end
       get "/api/v1/pokemons?page=2", headers: valid_headers, as: :json
